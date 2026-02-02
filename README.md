@@ -4,9 +4,9 @@
 
 ## Descripción
 
-ft_printf es una reimplementación de la función printf() de la biblioteca estándar de C. El objetivo principal es comprender y dominar el uso de funciones variádicas en C, así como desarrollar habilidades en el manejo de conversiones de formato y gestión de memoria.
+`ft_printf` es una reimplementación de la función `printf()` de la biblioteca estándar de C. El objetivo principal es comprender y dominar el uso de funciones variádicas en C, así como desarrollar habilidades en el manejo de conversiones de formato y gestión de memoria.
 
-Este proyecto permite crear una librería personalizada que imita el comportamiento del printf() original, implementando las conversiones más comunes y devolviendo el número de caracteres impresos.
+Este proyecto permite crear una librería personalizada que imita el comportamiento del `printf()` original, implementando las conversiones más comunes y devolviendo el número de caracteres impresos.
 
 ## Instrucciones
 
@@ -73,7 +73,7 @@ La función ft_printf soporta las siguientes conversiones:
 
 ### Elección del Algoritmo
 
-La función ft_printf procesa la cadena de formato de manera secuencial, recorriéndola carácter por carácter. Cuando encuentra el símbolo %, identifica el tipo de conversión que debe aplicar y obtiene el argumento correspondiente usando las funciones variádicas de C (va_start, va_arg y va_end).
+La función ft_printf procesa la cadena de formato de manera secuencial, recorriéndola carácter por carácter. Cuando encuentra el símbolo %, identifica el tipo de conversión que debe aplicar y obtiene el argumento correspondiente usando las funciones variádicas de C (`va_start`, `va_arg` y `va_end`).
 
 **Justificación**: Este enfoque es simple y eficiente, ya que no requiere estructuras complejas ni uso extra de memoria. Además, permite un control claro del flujo del programa y facilita añadir nuevas conversiones o funcionalidades en el futuro.
 
