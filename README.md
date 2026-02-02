@@ -33,16 +33,19 @@ Esto generará el archivo `libftprintf.a` en la raíz del repositorio.
 Para utilizar ft_printf en tu programa:
 
 1. Incluye el header en tu código:
+
 ```c
 #include "ft_printf.h"
 ```
 
 2. Compila tu programa enlazando la librería:
+
 ```bash
 cc tu_programa.c -L. -lftprintf -o tu_programa
 ```
 
 3. Ejemplo de uso:
+
 ```c
 #include "ft_printf.h"
 
@@ -87,6 +90,7 @@ El proyecto utiliza una arquitectura modular con las siguientes componentes:
 4. **Funciones auxiliares**: Para conversión de bases numéricas, manejo de signos, etc.
 
 **Justificación**: La separación en funciones especializadas permite:
+
 - Código más limpio y mantenible
 - Facilita el testing de cada conversión de forma independiente
 - Permite reutilizar código (por ejemplo, %d e %i comparten lógica)
@@ -94,11 +98,13 @@ El proyecto utiliza una arquitectura modular con las siguientes componentes:
 ## Recursos
 
 ### Documentación Técnica
+
 - [Manual de printf](https://man7.org/linux/man-pages/man3/printf.3.html)
 - [Funciones variádicas en C](https://en.cppreference.com/w/c/variadic)
 - [stdarg.h reference](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/stdarg.h.html)
 
 ### Tutorial
+
 - [Variadic functions in C](https://www.geeksforgeeks.org/variadic-functions-in-c/)
 
 ### Uso de IA
