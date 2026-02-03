@@ -76,7 +76,7 @@ La función ft_printf soporta las siguientes conversiones:
 
 ### Elección del Algoritmo
 
-La función ft_printf procesa la cadena de formato de manera secuencial, recorriéndola carácter por carácter. Cuando encuentra el símbolo %, identifica el tipo de conversión que debe aplicar y obtiene el argumento correspondiente usando las funciones variádicas de C (`va_start`, `va_arg` y `va_end`).
+La función `ft_printf` procesa la cadena de formato de manera secuencial, recorriéndola carácter por carácter. Cuando encuentra el símbolo `%`, identifica el tipo de conversión que debe aplicar y obtiene el argumento correspondiente usando las funciones variádicas de C (`va_start`, `va_arg` y `va_end`).
 
 **Justificación**: Este enfoque es simple y eficiente, ya que no requiere estructuras complejas ni uso extra de memoria. Además, permite un control claro del flujo del programa y facilita añadir nuevas conversiones o funcionalidades en el futuro.
 
@@ -84,16 +84,16 @@ La función ft_printf procesa la cadena de formato de manera secuencial, recorri
 
 El proyecto utiliza una arquitectura modular con las siguientes componentes:
 
-1. **Función principal (ft_printf)**: Gestiona la inicialización de va_list y coordina el parsing
+1. **Función principal (ft_printf)**: Gestiona la inicialización de `va_list` y coordina el parsing
 2. **Parser de formato**: Identifica los especificadores de conversión
-3. **Funciones de conversión**: Una función dedicada para cada tipo de conversión (%c, %s, %d, etc.)
+3. **Funciones de conversión**: Una función dedicada para cada tipo de conversión (`%c`, `%s`, `%d`, etc.)
 4. **Funciones auxiliares**: Para conversión de bases numéricas, manejo de signos, etc.
 
 **Justificación**: La separación en funciones especializadas permite:
 
 - Código más limpio y mantenible
 - Facilita el testing de cada conversión de forma independiente
-- Permite reutilizar código (por ejemplo, %d e %i comparten lógica)
+- Permite reutilizar código (por ejemplo, `%d` e `%i` comparten lógica)
 
 ## Recursos
 
