@@ -17,6 +17,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 
+# define HEXA "0123456789abcdef"
+# define HEXA_UP "0123456789ABCDEF"
+
 int		ft_printf(const char *format, ...);
 
 int		ft_print_char(char c);

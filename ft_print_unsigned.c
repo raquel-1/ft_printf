@@ -19,7 +19,7 @@ int ft_print_unsigned(unsigned int n)
 	len = 0;
 	if (n >= 10)
 	{
-		len += ft_print_nbr(n / 10);
+		len += ft_print_unsigned(n / 10);
 	}
 	len += ft_print_char((n % 10) + '0'); 
 	return (len);
