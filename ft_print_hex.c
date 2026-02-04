@@ -12,35 +12,35 @@
 
 #include "ft_printf.h"
 
-int ft_print_hex(unsigned int n, char format)
+int	ft_print_hex(unsigned int n, char format)
 {
-    char    char_hex;
-    int     len;
+	char	char_hex;
+	int		len;
 
-    len = 0;
+	len = 0;
 	if (n >= 16)
 	{
 		len += ft_print_hex(n / 16, format);
 	}
-    if (format == 'x')
-    {
-        char_hex = HEXA[n % 16];
-    }
-    if (format == 'X')
-    {
-        char_hex = HEXA_UP[n % 16];
-    }
-	len += ft_print_char(char_hex); 
+	if (format == 'x')
+	{
+		char_hex = HEXA[n % 16];
+	}
+	if (format == 'X')
+	{
+		char_hex = HEXA_UP[n % 16];
+	}
+	len += ft_print_char(char_hex);
 	return (len);
 }
 /*
 if (r == 'x')
-    putbase(va_arg(), HEXA, size);
+	putbase(va_arg(), HEXA, size);
 if (r == 'X')
-    putbase(va_arg(), HEXA_UPPER, size);
+	putbase(va_arg(), HEXA_UPPER, size);
 
 void    putbase(unsigned long n, char *base, int *size) &size
 {
-
-    *size++;
+	...
+	*size++;
 }*/

@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 #include <stdarg.h>
 #include <stdio.h>
-
+/*
 int sumatorio(int n, ...)
 {
     va_list vargs;
@@ -34,4 +34,4 @@ int main(){
     int total = sumatorio(2, 1, 2, 3, 4);
     printf("TOTAL: %d", total);
     return (0);
-}
+}*/
