@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h> //borrar
+#include <limits.h> //borrar
 
 static int	handle_format(va_list vargs, char specifier)
 {
@@ -33,6 +35,8 @@ static int	handle_format(va_list vargs, char specifier)
 		len += ft_print_hex(va_arg(vargs, unsigned int), 'x');
 	else if (specifier == 'X')
 		len += ft_print_hex(va_arg(vargs, unsigned int), 'X');
+	else if (specifier == 'a')
+    	len += ft_print_str("my awesome 42");
 	return (len);
 }
 
@@ -45,6 +49,8 @@ int	ft_printf(const char *format, ...)
 	va_start(vargs, format);
 	i = 0;
 	len = 0;
+	if (!format)
+		return (-1);
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -58,4 +64,12 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(vargs);
 	return (len);
+}
+
+int	main(void)
+{
+	int ret1, ret2;
+	ret1 = ft_printf("Hello %a world");
+	ret2 = printf("Hello my awesome 42 world");
+	printf("ft: %d | original: %d\n\n", ret1, ret2);
 }
