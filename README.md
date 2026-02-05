@@ -18,7 +18,21 @@ Para compilar la librería, ejecuta:
 make
 ```
 
-Esto generará el archivo `libftprintf.a` en la raíz del repositorio.
+```bash
+cc -Wall -Wextra -Werror ft_printf.c libftprintf.a -o delete
+```
+
+```bash
+./delete
+```
+
+```bash
+make fclean
+```
+
+```bash
+rm -f delete
+```
 
 ### Comandos del Makefile
 
@@ -30,32 +44,10 @@ Esto generará el archivo `libftprintf.a` en la raíz del repositorio.
 
 ### Uso
 
-Para utilizar ft_printf en tu programa:
-
 1. Incluye el header en tu código:
 
 ```c
 #include "ft_printf.h"
-```
-
-2. Compila tu programa enlazando la librería:
-
-```bash
-cc tu_programa.c -L. -lftprintf -o tu_programa
-```
-
-3. Ejemplo de uso:
-
-```c
-#include "ft_printf.h"
-
-int main(void)
-{
-    ft_printf("Hola %s!\n", "mundo");
-    ft_printf("Número: %d\n", 42);
-    ft_printf("Hexadecimal: %x\n", 255);
-    return (0);
-}
 ```
 
 ## Conversiones Implementadas
@@ -110,6 +102,7 @@ El proyecto utiliza una arquitectura modular con las siguientes componentes:
 ### Uso de IA
 
 Durante el desarrollo del proyecto se siguieron las normas de 42 sobre el uso de IA, utilizándola solo como apoyo para aclarar conceptos teóricos, comprobar sintaxis específica de C y entender situaciones límite que pueden provocar errores en ciertas conversiones. Todo el código fue escrito y comprendido de forma autónoma, sin pedir implementaciones directas a la IA.
+
 
 ---
 

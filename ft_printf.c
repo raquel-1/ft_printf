@@ -46,9 +46,7 @@ int	ft_printf(const char *format, ...)
 				len += ft_print_hex(va_arg(vargs, unsigned int), 'X');
 		}
 		else
-		{
 			len += ft_print_char(format[i]);
-		}
 		i++;
 	}
 	va_end(vargs);
