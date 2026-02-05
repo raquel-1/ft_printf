@@ -33,14 +33,3 @@ int	ft_print_hex(unsigned int n, char format)
 	len += ft_print_char(char_hex);
 	return (len);
 }
-/*
-if (r == 'x')
-	putbase(va_arg(), HEXA, size);
-if (r == 'X')
-	putbase(va_arg(), HEXA_UPPER, size);
-
-void    putbase(unsigned long n, char *base, int *size) &size
-{
-	...
-	*size++;
-}*/
