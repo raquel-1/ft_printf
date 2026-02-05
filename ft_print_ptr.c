@@ -12,22 +12,6 @@
 
 #include "ft_printf.h"
 
-static int	putbase(unsigned long n);
-
-int	ft_print_ptr(void *ptr)
-{
-	int				len;
-	unsigned long	direc;
-
-	if (!ptr)
-		return (write(1, "(nil)", 5));
-	len = 0;
-	len += write(1, "0x", 2);
-	direc = (unsigned long)ptr;
-	len += putbase(direc);
-	return (len);
-}
-
 static int	putbase(unsigned long n)
 {
 	char	char_hex;
@@ -40,5 +24,19 @@ static int	putbase(unsigned long n)
 	}
 	char_hex = HEXA[n % 16];
 	len += ft_print_char(char_hex);
+	return (len);
+}
+
+int	ft_print_ptr(void *ptr)
+{
+	int				len;
+	unsigned long	direc;
+
+	if (!ptr)
+		return (write(1, "(nil)", 5));
+	len = 0;
+	len += write(1, "0x", 2);
+	direc = (unsigned long)ptr;
+	len += putbase(direc);
 	return (len);
 }
